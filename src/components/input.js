@@ -1,10 +1,11 @@
 import React from 'react'
 import { SafeAreaView, Text, TextInput, View, StyleSheet } from 'react-native'
 
-function Input({placeholder}) {
+function Input({placeholder, onType}) {
     return (
         <View style={styles.container}>
-            <TextInput placeholder= {placeholder} />
+            <TextInput placeholder= {placeholder}
+            onChangeText={(val)=> onType(val)} />
         </View>
     );
     
